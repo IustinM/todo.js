@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(120deg, #673ab7, #512da8);
+  background: linear-gradient(120deg, #0575e6, #021b79);
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   color: white;
@@ -20,22 +20,26 @@ form {
   justify-content: center;
   align-items: center;
 }
+h1 {
+  text-decoration: underline;
+}
 form input,
 form button {
+  border-radius: 10px;
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
   background: white;
 }
 form button {
-  color: #512da8;
+  color: #021b79;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button:hover {
   color: white;
-  background: #512da8;
+  background: #021b79;
 }
 .todo-container {
   display: flex;
@@ -55,13 +59,14 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s ease;
+  border-radius: 10px;
 }
 .todo li {
   flex: 1;
 }
 .trash-button,
 .complete-button {
-  background: #512da8;
+  background: #021b79;
   color: white;
   border: none;
   padding: 1rem;
@@ -70,9 +75,22 @@ form button:hover {
 }
 .complete-button {
   background: rgb(73, 204, 73);
+  transition: all 0.2s ease;
 }
 .trash-button {
-  background: red;
+  background: rgb(248, 91, 91);
+  border-radius: 0px 10px 10px 0px;
+  transition: all 0.2s ease;
+}
+.complete-button:hover {
+  /* border: 2px solid rgb(73, 204, 73); */
+  background: white;
+  color: rgb(73, 204, 73);
+}
+.trash-button:hover {
+  background: white;
+  color: rgb(248, 91, 91);
+  border-radius: 0px 10px 10px 0px;
 }
 .todo-item {
   padding: 0rem 0.5rem;
@@ -96,10 +114,11 @@ select {
   appearance: none;
   outline: none;
   border: none;
-  color: #512da8;
+  color: #021b79;
   width: 10rem;
   cursor: pointer;
   padding: 1.2rem;
+  border-radius: 10px;
 }
 
 .select {
@@ -111,16 +130,17 @@ select {
 .select::after {
   content: "\25BC";
   position: absolute;
-  background: #673ab7;
+  background: #0575e6;
   top: 0;
   right: 0;
   padding: 1rem;
   pointer-events: none;
   transition: all 0.2s ease;
+  border-radius: 0px 10px 10px 0px;
 }
 .select:hover::after {
   background: white;
-  color: #673ab7;
+  color: #0575e6;
 }
 
 @media screen and (max-width: 650px) {
@@ -145,6 +165,7 @@ select {
   }
   form button {
     padding: 1rem;
+    margin-left: 1rem;
   }
   form input,
   form button {
