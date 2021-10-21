@@ -122,3 +122,41 @@ select {
   background: white;
   color: #673ab7;
 }
+
+@media screen and (max-width: 650px) {
+  form {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-btn {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .form-btn input {
+    padding: 1rem 2rem;
+  }
+  form button {
+    padding: 1rem;
+  }
+  form input,
+  form button {
+    font-size: 1rem;
+  }
+  .todo {
+    font-size: 1rem;
+  }
+  .trash-button,
+  .complete-button {
+    padding: 1rem;
+
+    font-size: 0.7rem;
+  }
+}
